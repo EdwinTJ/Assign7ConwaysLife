@@ -33,6 +33,22 @@ public class ConwaysLife {
         }
     }
 
+    public static void render(LifeSimulator simulator, Screen screen, TextGraphics graphics) {
+        screen.clear();
+        simulator.insertPattern(new PatternBlinker(), 5, 5);
+
+        for (int i = 0; i < simulator.getSizeX(); i++) {
+            for (int j = 0; j < simulator.getSizeY(); j++) {
+                if(simulator.getCell(i, j)) {
+                    graphics.setCharacter(i, j, 'Z');
+                }
+            }
+        }
+        try {
+            screen.refresh();
+        } catch (Exception ex) {
+        }
+    }
 
     public static void sampleRender(Screen screen, TextGraphics graphics, int xPos) {
         screen.clear();

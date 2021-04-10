@@ -5,15 +5,3 @@ public abstract class Pattern {
     public abstract boolean getCell(int x, int y);
 
 }
-
-class PatternBlinker{
-
-}
-
-class PatternBlock{
-
-}
-
-class PatternGlider{
-
-}

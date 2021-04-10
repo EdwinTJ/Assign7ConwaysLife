@@ -1,7 +1,7 @@
 class PatternAcorn extends Pattern {
     boolean acorn[][];
-    public int sizeX = 7;
-    public int sizeY = 3;
+    public int sizeX;
+    public int sizeY;
 
     public PatternAcorn() {
         acorn = new boolean[][] {
@@ -9,20 +9,26 @@ class PatternAcorn extends Pattern {
                 { false, false, false, true, false, false, false },
                 { true, true, false, false, true, true, true }
         };
+
+        this.sizeX = 7;
+        this.sizeY = 3;
     }
 
     public PatternAcorn(int sizeX, int sizeY) {
         this.sizeX = sizeX;
         this.sizeY = sizeY;
     }
+
     @Override
     public boolean getCell(int x, int y) {
-        return acorn[x][y];
+        return acorn[y][x];
     }
+
     @Override
     public int getSizeX() {
         return sizeX;
     }
+
     @Override
     public int getSizeY() {
         return sizeY;
