@@ -6,10 +6,6 @@ public abstract class Pattern {
 
 }
 
-class PatternAcorn{
-
-}
-
 class PatternBlinker{
 
 }

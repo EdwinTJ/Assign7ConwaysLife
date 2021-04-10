@@ -33,6 +33,7 @@ public class ConwaysLife {
         }
     }
 
+
     public static void sampleRender(Screen screen, TextGraphics graphics, int xPos) {
         screen.clear();
 
